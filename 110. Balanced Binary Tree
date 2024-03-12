@@ -1,0 +1,55 @@
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
+var isBalanced=function(root){
+    if(root===null) return true;
+    let flag=true;
+    var compareTree=function(root,depth=0){
+        if(root===null) return depth;
+        let bam=compareTree(root.left,depth+1);
+        let dan=compareTree(root.right,depth+1);
+        if(Math.abs(bam-dan)>1) flag=false;
+        return Math.max(bam,dan);
+    }
+    compareTree(root);
+    return flag;
+}
+let data={
+    val:1,
+    left:{
+        val:2,
+        left:{
+            val:4,
+            left:{
+                val:8,
+                left:null,
+                right:null,
+            },
+            right:null,
+        },
+        right:{
+            val:5,
+            left:null,
+            right:null,
+        },
+    },
+    right:{
+        val:3,
+        left:{
+            val:6,
+            left:null,
+            right:null,
+        },
+        right:null,
+    },
+}
+console.log(isBalanced(data));
