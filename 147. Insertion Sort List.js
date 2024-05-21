@@ -23,16 +23,7 @@ var insertionSortList = function(head) {
     array.push(temp.val);
     temp=temp.next;
   }
-  for(let i=1;i<array.length;i++){
-    let key=array[i];
-    let j=i-1;
-
-    while(j>=0 && array[j]>key){
-      array[j+1]=array[j];
-      j--;
-    }
-    array[j+1]=key;
-  }
+  array.sort((a,b)=>a-b);
 
   let root={
     val:array[0],
