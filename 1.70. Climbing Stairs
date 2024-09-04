@@ -1,0 +1,16 @@
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function(n) {
+    let memo=new Array(n+1).fill(-1);
+    return climbNewStair(n,memo);
+}
+var climbNewStair=function(n,memo){
+    if(n===0) return 1;
+    if(n<0) return 0;
+    if(memo[n]!==-1) return memo[n];
+    memo[n]=climbNewStair(n-1,memo)+climbNewStair(n-2,memo);
+    return memo[n];
+}
+console.log(climbStairs(2));
