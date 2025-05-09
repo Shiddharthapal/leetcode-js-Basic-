@@ -1,0 +1,44 @@
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function(nums) {
+   /*let map=new Map()
+   let flag=false
+   nums.forEach((value)=>{//o(n)
+    if(!map.has(value))
+        map.set(value,1)
+    else 
+        flag=true
+   })
+   return flag
+
+   let arr=new Array(224).fill(0)//o(n)
+   let flag=false
+   for(let i=0;i<nums.length;i++){
+    if(arr[nums[i]]>0) 
+        flag=true
+        break
+    else 
+        arr[nums[i]]=1
+   })
+   return flag
+
+
+   let set=new Set()
+   let flag=false
+   for(let i=0;i<nums.length;i++){//o(n)
+    if(!set.has(nums[i])){
+        set.add(nums[i]);
+    }else{
+        flag=true
+        break
+    }
+   }
+   return flag
+   */
+  let set=new Set(nums)//o(1)
+  if(nums.length===set.size)return false
+  else return true   
+};
+console.log(containsDuplicate([1,2,3,4,5,7,8,9,6,8]))
