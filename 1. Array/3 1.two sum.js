@@ -1,0 +1,25 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    let map=new Map()
+    for(let i=0;i<nums.length;i++){
+        let tar=target-nums[i]
+        if(!map.has(tar))
+            map.set(nums[i],i)
+        else
+            return [map.get(tar),i]
+    }/*
+    let arr=new Array(10000).fill(-1)
+    for(let i=0;i<nums.length;i++){
+        let tar=target-nums[i]
+        if(arr[tar]>-1)
+            return [arr[tar],i]
+        else
+            arr[nums[i]]=i
+    }// ekhane value limit beshi, r value limit beshi hoyle array
+    // index issues hoi. so array use kora jabe nah.*/
+};
+console.log(twoSum([2,7,11,15,22,27,33,39,43,47,53],9))
