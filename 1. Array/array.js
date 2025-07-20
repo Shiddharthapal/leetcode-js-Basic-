@@ -2,6 +2,20 @@ let arr = [1, 2, 3, 4, 5, 6];
 let arr2 = new Array(1, 2, 3, 4, 5);
 let arr3 = new Array(10).fill(0);
 
+/*
+for number if the number is big and number as string form.
+if i can't found the proper ans using parseInt(string)
+then i can use BitInt(string). 
+it can multiply or convert large string to integer easily .
+ -> integer to string 
+ String(num); 
+
+*/
+let num1 = "23456789",
+  num2 = "987654321";
+let num = BigInt(num1) * BigInt(num2);
+let strin_g = String(num);
+
 let a = Array.isArray(arr);
 console.log(a);
 
