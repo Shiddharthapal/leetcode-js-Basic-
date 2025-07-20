@@ -1,3 +1,4 @@
+//68% beats
 /**
  * @param {number[]} candidates
  * @param {number} target
@@ -24,4 +25,34 @@ var combinationSum2 = function (candidates, target) {
   dfs(0, target, []);
   return result;
 };
-console.log(combinationSum2([2, 5, 2, 1, 2], 5));
+//38% beats
+// /**
+//  * @param {number[]} candidates
+//  * @param {number} target
+//  * @return {number[][]}
+//  */
+// var combinationSum2 = function (candidates, target) {
+//   candidates.sort((a, b) => a - b);
+//   let result = [];
+
+//   var dfs = (value, first, arr) => {
+//     if (value === target) {
+//       result.push([...arr]);
+//       return;
+//     }
+//     for (let i = first; i < candidates.length; i++) {
+//       if (i > first && candidates[i] === candidates[i - 1]) continue;
+//       if (value > target) break;
+//       value += candidates[i];
+//       arr.push(candidates[i]);
+//       dfs(value, i + 1, arr);
+//       value -= candidates[i];
+//       arr.pop();
+//     }
+//   };
+
+//   dfs(0, 0, []);
+//   return result;
+// };
+
+console.log(combinationSum2([10, 1, 2, 7, 6, 1, 5], 8));
