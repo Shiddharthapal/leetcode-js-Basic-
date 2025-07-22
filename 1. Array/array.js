@@ -39,7 +39,7 @@ console.log(d);
 let mapping = arr.map((value) => {
   return value >= 2;
 });
-console.log(mapping);
+console.log("map=>", mapping);
 
 let filter = arr2.filter((value) => {
   return value >= 2;
@@ -83,7 +83,7 @@ console.log(string);
 let string2 = arr.join(" ");
 console.log(string2);
 let string3 = JSON.stringify(arr2);
-console.log(string3);
+console.log("json", string3);
 
 let arr4 = [1, 2, 3, 4];
 let arr5 = [1, 2, 3, 4];

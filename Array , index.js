@@ -2,7 +2,7 @@
 let arr = [1, 2, 3, 4, 5];
 let arr2 = new Array(1, 2, 3, 4, 5);
 let arr3 = new Array(10).fill(0);
-let t=Array.isArray(arr); // return true or false
+let t = Array.isArray(arr); // return true or false
 
 // Accessing Elements
 let length = arr.length;
@@ -11,12 +11,12 @@ let first = arr[0];
 // Looping
 // for loop
 for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
+  console.log(arr[i]);
 }
 
 // forEach loop
 arr.forEach((element, index, array) => {
-    console.log(element);
+  console.log(element);
 });
 
 // Mapping
@@ -35,7 +35,7 @@ arr.unshift(0); // add to beginning
 arr.shift(); // remove from beginning
 
 // Slicing & Splicing
-let slice = arr.slice(0, 2);//cut 2 elements from 0 index & make a new array
+let slice = arr.slice(0, 2); //cut 2 elements from 0 index & make a new array
 arr.splice(0, 2); // modifies original
 
 // Finding Elements
@@ -71,15 +71,15 @@ var v3 = 5;
 //......function......
 
 let v4 = function () {
-    //function body
+  //function body
 };
 let v5 = () => {
-    //function body
+  //function body
 };
 
 //truthy & falsy value
 let link =
-    "https://itzone.com.vn/en/article/what-are-truthy-and-falsy-in-javascript/";
+  "https://itzone.com.vn/en/article/what-are-truthy-and-falsy-in-javascript/";
 
 //..........................................ARRAY................................................
 let arr = [1, 2, 3, 4, 5];
@@ -92,7 +92,7 @@ set.add(6);
 set.delete(6);
 set.has(6); //return boolean if set has 6
 set.size; //return size of set
-let concat=new([...arr,...arr2])//concatination of set
+let concat = new [...arr, ...arr2](); //concatination of set
 
 //map
 let map = new Map();
@@ -101,11 +101,11 @@ map.get("5"); //return fasdfasd
 let hasInmap = map.has("5"); // true / false
 
 //create a array
-let need=[index,value]
-let map=new Map()
-map.set(key,need)
-let ret=map.get(key)//key=need[index,value]
-let val=ret[1]
-let index=ret[0]
-let z
-value.length>val? z=index: z=value
+let need = [index, value];
+let map1 = new Map();
+map.set(key, need);
+let ret = map.get(key); //key=need[index,value]
+let val = ret[1];
+let index = ret[0];
+let z;
+value.length > val ? (z = index) : (z = value);
