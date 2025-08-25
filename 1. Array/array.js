@@ -73,6 +73,28 @@ let f = arr2.sort((a, b) => {
 });
 console.log(f);
 
+let result = [
+  "1234",
+  "1324",
+  "1243",
+  "1342",
+  "1423",
+  "1432",
+  "2134",
+  "2143",
+  "4321",
+  "2341",
+  "4213",
+  "4231",
+  "4312",
+  "2314",
+];
+
+let assce = result.sort((a, b) => a - b);
+console.log("🧞‍♂️  assce --->", assce);
+let desce = result.sort((a, b) => b - a);
+console.log("🧞‍♂️  desce --->", desce);
+
 let reverse = arr.reverse();
 console.log(reverse);
 let con = [arr, arr2];
