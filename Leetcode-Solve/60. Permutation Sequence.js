@@ -37,3 +37,5 @@ var getPermutation = function (n, k) {
 };
 
 console.log(getPermutation(3, 3));
+
+console.log(0 % 1);
