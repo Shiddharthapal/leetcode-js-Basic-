@@ -24,7 +24,7 @@
 //   return flag;
 // };
 
-//here the time complexity is o(log(n*m))
+//here the time complexity is o(log(n*m)) --> Binary search
 var searchMatrix = function (matrix, target) {
   let flag = false;
   let row = matrix.length;
