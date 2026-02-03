@@ -5,44 +5,56 @@
 var restoreIpAddresses = function(s) {
     let result=[];
     let len=s.length;
-    let block_size=Math.ceil(len/4);
-    console.log("block_size ==> ", block_size);
+    let temp=[];
 
-
-    //here i am using cascade of clock algorithm 
-    let first_b,second_b,third_b,fourth_b=block_size;
-    setInterval(()=>{
-        if(fourth_b===0){
-            fourth_b=block_size;
-            third_b--;
+    //check the slice string that maintain all condition
+    var isValid=function(tempStr){
+        if(tempStr.length>3 || (tempStr.length>1 && tempStr[0]==='0')){
+            return false;
         }
-        if(third_b===0){
-            third_b=block_size;
-            fourth_b=block_size;
-            second_b--;
-        }
-
-        if(second_b===0){
-            second_b=block_size;
-            third_b=block_size;
-            fourth_b=block_size;
-            first_b--;
-        }
-        if(first_b===0){
+        
+        if(parseInt(tempStr)>255) return false;
+        return true;
+    }
+    
+    //backtracking function
+    var backtracking = function(i){
+        if(temp.length>4){
             return;
         }
 
-        let blocks = [
-            s.slice(0, first_b),
-            s.slice(first_b, second_b),
-            s.slice(second_b, third_b),
-            s.slice(third_b, fourth_b)
-        ];
+        //when string length is meet to actual string length with 3>= size block
+        if(temp.length===4 && i===len){
+            let string="";
+            for(let i=0;i<temp.length;i++){
+                string+=temp[i];
+                if(i!==temp.length-1) string+=".";
+            }
+            if(string.length===len+3) result.push(string);
+            return;
+        }
 
-    },1)
+        //call validation function and put the string to a array and call the backtacking function
+        for(let j=i;j<len;j++){
+            let tempSlice= s.substring(i,j+1)
+            if(isValid(tempSlice)){
+
+                 temp.push(tempSlice);
+                backtracking(j+1);
+                temp.pop();
+            }   
+        }
+    }
+
+    //call the back tracking function
+    for(let i=0;i<len;i++){
+        backtracking(i);
+    }
+
+    return result;
    
 };
 
-console.log(restoreIpAddresses("25525511135"))
+console.log(restoreIpAddresses("101023"))
 
 
