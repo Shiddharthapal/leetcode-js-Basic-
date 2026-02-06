@@ -45,6 +45,4 @@ var generateTrees = function (n) {
   };
   return generateSubtree(1, n);
 };
-
-
 console.log(generateTrees(3));
