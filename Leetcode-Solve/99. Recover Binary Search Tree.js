@@ -14,10 +14,10 @@ var recoverTree = function (root) {
   if (!root) return root;
   let firstWrong = null;
   let secondWrong = null;
-//create a temp TreeNode
-  let prev= new TreeNode(-Infinity);
+  //create a temp TreeNode
+  let prev = new TreeNode(-Infinity);
 
-//recursive function that travarse the tree
+  //recursive function that travarse the tree
   function inOrderTraversal(node) {
     if (!node) return;
 
