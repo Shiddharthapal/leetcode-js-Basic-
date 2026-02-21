@@ -88,6 +88,7 @@ let arr3 = new Array(10).fill(0);
 
 //set
 let set = new Set(arr);
+let primeNumber = new Set([2, 3, 5, 7, 11, 13, 17, 19]);
 set.add(6);
 set.delete(6);
 set.has(6); //return boolean if set has 6
