@@ -13,7 +13,6 @@ var countBinarySubstrings = function (s) {
             prev=current;
             current=1;
         }
-
         if(current<=prev) result++;
     }
     return result;
