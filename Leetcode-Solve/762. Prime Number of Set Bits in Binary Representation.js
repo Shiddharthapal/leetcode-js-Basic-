@@ -28,3 +28,11 @@ var countPrimeSetBits = function (left, right) {
 };
 
 console.log(countPrimeSetBits(10, 15));
+
+// var fun= function(){
+// const a=[1,2,3];
+// const b=a;
+// b.push(4);
+// return a;
+// }
+// console.log(fun());
