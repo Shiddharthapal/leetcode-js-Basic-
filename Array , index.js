@@ -52,8 +52,17 @@ let reversed = arr.reverse();
 // s Concatenating two arrays
 let concatenated = [...arr, ...arr2];
 
+
+
 //to find a binary from a number
 let binary = need.toString(2);
+
+let bina_dig="101";
+// flip a binary 
+let flip_binary= bina_dig.replace(/[01]/g, binary=>binary==="0"?"1":"0");
+
+//binary to decimal
+let decimal= parseInt(bina_dig,2); 
 
 //i want exact digit of binary number
 let digit = 3;
