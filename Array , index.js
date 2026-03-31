@@ -46,6 +46,9 @@ let has = arr2.contains(2); // return true or false
 arr.sort((a, b) => a - b); // ascending
 arr.sort((a, b) => b - a); // descending
 
+let letters=['a', 'B', 'c', 'A'];
+letters.sort((a, b) => a.localeCompare(b));
+
 // Reversing array
 let reversed = arr.reverse();
 
@@ -98,10 +101,6 @@ let link =
   "https://itzone.com.vn/en/article/what-are-truthy-and-falsy-in-javascript/";
 
 //..........................................ARRAY................................................
-let arr = [1, 2, 3, 4, 5];
-let arr2 = new Array(1, 2, 3, 4, 5);
-let arr3 = new Array(10).fill(0);
-
 //set
 let set = new Set(arr);
 let primeNumber = new Set([2, 3, 5, 7, 11, 13, 17, 19]);
