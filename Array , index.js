@@ -46,7 +46,7 @@ let has = arr2.contains(2); // return true or false
 arr.sort((a, b) => a - b); // ascending
 arr.sort((a, b) => b - a); // descending
 
-let letters=['a', 'B', 'c', 'A'];
+let letters = ["a", "B", "c", "A"];
 letters.sort((a, b) => a.localeCompare(b));
 
 // Reversing array
@@ -55,17 +55,17 @@ let reversed = arr.reverse();
 // s Concatenating two arrays
 let concatenated = [...arr, ...arr2];
 
-
-
 //to find a binary from a number
 let binary = need.toString(2);
 
-let bina_dig="101";
-// flip a binary 
-let flip_binary= bina_dig.replace(/[01]/g, binary=>binary==="0"?"1":"0");
+let bina_dig = "101";
+// flip a binary
+let flip_binary = bina_dig.replace(/[01]/g, (binary) =>
+  binary === "0" ? "1" : "0",
+);
 
 //binary to decimal
-let decimal= parseInt(bina_dig,2); 
+let decimal = parseInt(bina_dig, 2);
 
 //i want exact digit of binary number
 let digit = 3;
@@ -87,14 +87,69 @@ const v = 5; //can't change
 let v2 = 5;
 var v3 = 5;
 
-//......function......
+//............................................function..........................................
 
-let v4 = function () {
-  //function body
+//...............................name function
+function greet(a, b) {}
+//greet(1,2);
+
+//...........................anonymous function
+let multi = function (a, b) {};
+// console.log(multi(3,4))
+
+//...........................Built in funtion
+//builtin function= written by js (inside)
+//user define function = written by user
+setTimeout(function () {
+  console.log("This is a function");
+}, 2000);
+
+//..........................Array function..
+//we can write array function in one or multiple line
+const arrayFunction = (a, b) => a + b;
+
+const arrayFunction2 = (a, b) => {
+  let sum = a + b;
+  console.log(sum);
 };
-let v5 = () => {
-  //function body
-};
+
+//..........................Templet variable..
+let name = "God";
+console.log(`Name=,${name}`);
+
+//..............................Immediately Involed Function Expression (IIFE)..
+(function () {
+  console.log("Hello");
+})();
+//this function is no need to call, it call autometically
+
+//..................................Generator function..
+// it work step by step. when we need to work step by step then we can use this function
+
+function* generatorFunction() {
+  yield 1;
+  yield 2;
+  yield 3;
+  yield 4;
+}
+let gen = generatorFunction();
+
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+
+//in this process lazy loading work like when we go to a application then we
+// see that all content comes not together. content comes one by one serialwise
+
+//..................................recursive function..
+function greet(n) {
+  if (n === 0) return;
+  console.log("number=>", n);
+  greet(n--);
+}
+
 
 //truthy & falsy value
 let link =
