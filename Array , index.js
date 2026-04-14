@@ -25,8 +25,22 @@ let mapped = arr2.map((value) => value >= 2); //map the array to another array
 // Filtering
 let filtered = arr2.filter((value) => value >= 2); // return new array with filtered elements
 
+
+// Finding Elements
+let found = arr.find((value) => value >= 2); // return first element
+let has = arr2.contains(2); // return true or false
+
+//Find index
+let indexing = arr.findIndex((value) => value === 2); // return first element
+
+
 // Reducing
 let sum = arr2.reduce((accumulator, value) => accumulator + value, 0); // return a single values after calculation
+/* 
+accumulator means that store sum,by default value is 0
+value means current index value
+0 it is the starting index
+*/
 
 // Adding & Removing Elements
 arr.push(6); // add to end
@@ -38,9 +52,6 @@ arr.shift(); // remove from beginning
 let slice = arr.slice(0, 2); //cut 2 elements from 0 index & make a new array
 arr.splice(0, 2); // modifies original
 
-// Finding Elements
-let found = arr.find((value) => value >= 2); // return first element
-let has = arr2.contains(2); // return true or false
 
 // Sorting
 arr.sort((a, b) => a - b); // ascending
