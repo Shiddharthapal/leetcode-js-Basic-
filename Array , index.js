@@ -176,11 +176,28 @@ set.has(6); //return boolean if set has 6
 set.size; //return size of set
 let concat = new [...arr, ...arr2](); //concatination of set
 
-//map
+//...............................map..................................
+//create a map
 let map = new Map();
+
+//set value into map
 map.set("5", "fasdfasd");
+
+//get value from map
 map.get("5"); //return fasdfasd
+
+//check value is staying or has into the map
 let hasInmap = map.has("5"); // true / false
+
+//delete any key from map
+map.delete("5");
+console.log(map);
+
+//fully clear the map
+map.clear();
+
+//findout the size of the map
+let map_size=map.size();
 
 //create a array
 let need = [index, value];

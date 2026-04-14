@@ -22,8 +22,13 @@ console.log(myobj.key2);
 
 delete myobj.key1;
 
+//findout the keys of the object
 console.log(Object.keys(myobj));
+
+//findout the values of the object
 console.log(Object.values(myobj));
+
+//findout the key+values of the object
 console.log(Object.entries(myobj));
 
 console.log(myobj.hasOwnProperty("key1"));
