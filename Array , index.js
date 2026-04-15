@@ -98,6 +98,17 @@ const v = 5; //can't change
 let v2 = 5;
 var v3 = 5;
 
+
+//...........Spread operator....
+//spread operation on array
+let temp_array1=[1,2];
+let temp_array2=[3,4];
+
+let final_array=[...temp_array1,...temp_array2];
+
+temp_array2 =[...temp_array1,3,4];
+
+
 //............................................function..........................................
 
 //...............................name function
